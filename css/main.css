@@ -222,7 +222,7 @@ body {
 }
 
 .background-back-image {
-  background: url("/img/background/bg-hero1.jpg");
+  background: url("img/background/bg-hero1.jpg");
   background-repeat: repeat;
   background-position: left top;
   position: absolute;
