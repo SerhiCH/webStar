@@ -222,9 +222,7 @@ body {
 }
 
 .background-back-image {
-  background: url("img/background/bg-hero1.jpg");
-  background-repeat: repeat;
-  background-position: left top;
+  background: url("..//img/background/bg-hero1.jpg") repeat left top;
   position: absolute;
   width: 100%;
   height: 895px;
@@ -353,7 +351,7 @@ body {
 }
 
 [class*="socials__"]:not(:last-child) {
-  border-right: 1px solid #21d6bf;
+  border-right: 1px solid #0b6e60;
 }
 
 .socials__mail-text-link {
@@ -368,7 +366,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  border-bottom: 1px solid #21d6bf;
+  border-bottom: 1px solid #0b6e60;
   top: 1px;
   position: relative;
 }
@@ -484,7 +482,7 @@ button:hover {
   font-size: 23px;
   font-weight: 800;
   padding: 0px 0px 0px 10px;
-  color: #21d6bf;
+  color: #0b6e60;
   white-space: nowrap;
 }
 
@@ -506,7 +504,7 @@ button:hover {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border-top: 1px solid #21d6bf;
+  border-top: 1px solid #0b6e60;
 }
 
 .menu__element-name {
@@ -663,8 +661,8 @@ button:hover {
   width: 33%;
   height: 16%;
   margin: 30px 0px 0px 0px;
-  -webkit-filter: invert(1) brightness(50%) sepia(1) hue-rotate(129.6deg) saturate(400%) brightness(200%);
-          filter: invert(1) brightness(50%) sepia(1) hue-rotate(129.6deg) saturate(400%) brightness(200%);
+  -webkit-filter: invert(1) brightness(50%) sepia(1) hue-rotate(129.6deg) saturate(400%) brightness(50%);
+          filter: invert(1) brightness(50%) sepia(1) hue-rotate(129.6deg) saturate(400%) brightness(50%);
 }
 
 .swiper-button-prev {
@@ -677,7 +675,7 @@ button:hover {
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  color: #21d6bf;
+  color: #0b6e60;
   font-size: 55px;
   display: none;
 }
@@ -687,13 +685,13 @@ button:hover {
   height: 15px;
   line-height: 10px;
   font-size: 14px;
-  background: #21d6bf;
+  background: #0b6e60;
 }
 
 .swiper-pagination-fraction {
   line-height: 10px;
   font-size: 16px;
-  color: #21d6bf;
+  color: #0b6e60;
   margin: 0px 0px 37px 0px;
 }
 
@@ -709,7 +707,7 @@ button:hover {
 
 .swiper-scrollbar-drag {
   cursor: pointer;
-  background: #21d6bf;
+  background: #0b6e60;
 }
 
 /* ============================================================ */
@@ -722,6 +720,7 @@ button:hover {
 .slider-container {
   width: 0;
   overflow: hidden;
+  padding: 0 0 0 1px;
 }
 
 .slider {
@@ -740,7 +739,7 @@ button:hover {
   background-size: contain;
   position: relative;
   height: 200px;
-  border: 1px solid #21d6bf;
+  border: 1px solid #0b6e60;
   border-bottom: 0px;
   border-radius: 10px 10px 0 0;
 }
@@ -823,6 +822,6 @@ button:hover {
   text-align: center;
   height: 40px;
   width: 100%;
-  border-top: 1px solid #21d6bf;
+  border-top: 1px solid #0b6e60;
   font-weight: 700;
 }
