@@ -1,0 +1,630 @@
+@import "_null";
+@import "effectsscss";
+@import "extensionscss";
+// @import "_normalize";
+// @import "_sanitize";
+// @import "mediaQueriesscss";
+// @import "glasmorphismscss";
+
+// @import url(https://fontsgoogleapiscom/css2?family=Fjalla+One:wght@300;400;600;800&display=swap);
+// @import url(https://fontsgoogleapiscom/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap);
+// @import url(https://fontsgoogleapiscom/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import url(https://fontsgoogleapiscom/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
+
+/* ============================================================ */
+
+backgroung-img {
+    background: url("//img/_template/Hairypng") no-repeat center top;
+    position: fixed;
+    position: absolute;
+    // background-size: contain;
+    opacity: 025;
+    width: 100%;
+    height: 5430px;
+    top: 0;
+    left: 0;
+}
+container {
+    position: relative;
+}
+
+// * {border: 1px solid red;}
+
+/* ============================================================ */
+
+// colors
+$orange: #e1b838;
+$background: #272727;
+$hover: rgba(255, 255, 255, 022);
+$hover-menu: rgba(255, 255, 255, 01);
+$starblue: #4acaff;
+$stargreen: #21d6bf;
+$line: #21d6bf;
+$line: rgb(11, 110, 96);
+
+// mixins
+@mixin center-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+@mixin adaptive_block($w: 50, $h: 50, $containerWide: 0) {
+    background-size: contain;
+    @if $containerWide == 0 {
+        width: $w + vw;
+        height: $h + vw;
+    } @else {
+        width: ($w/$containerWide) * 100%;
+        max-height: $h + px;
+        height: ($h/$containerWide) * 100vw;
+    }
+}
+@mixin svg_color($d, $b: 50) {
+    filter: invert(1) brightness(50%) sepia(1) hue-rotate(($d * 36) + deg)
+        saturate(400%) brightness($b * 2%);
+}
+
+@mixin text-style-1 {
+    background: linear-gradient(135deg, #4acaff, #21d6bf);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-color: rgba(0, 0, 0, 1);
+}
+@mixin text-style-2 {
+    background: linear-gradient(90deg, #0f11ee, #ee7f0c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+// flex-display(@display: flex) {
+//     display: ~"-webkit-@{display}";
+//     display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
+//     display: ~"-ms-@{display}"; // IE11
+//     display: @display;
+// }
+
+/*============================================================sep*/
+
+body {
+    font-family: Roboto;
+    background: $background;
+    color: white;
+}
+
+background-back-image {
+    // background-image: linear-gradient(43deg; #4158D0 0%; #C850C0 46%; #FFCC70 100%);
+    background: url(//img/background/backjpg) repeat left top;
+    // background-repeat: repeat;
+    // background-position: left top;
+    position: absolute;
+    width: 100%;
+    // height: 1020px;
+    height: 895px;
+    // background-position: center top;
+    // height: 100%;
+    // height: 100vh;
+    // background-size: 30%;
+    // background-size: auto;
+    // background-size: 150%;
+    // background-size:cover;
+    // background-size:contain;
+    // background-size: auto 100%;
+    // opacity: 0075;
+    // object-fit: cover; /* Вписываем фотографию в область */
+}
+background-back-image::before {
+    content: "";
+    position: absolute;
+    backdrop-filter: blur(2px) saturate(75%);
+    background-color: rgba(255, 255, 255, 004);
+    width: 100%;
+    height: 100%;
+}
+// background-back-image:before {
+//     content: ;
+//     // display: block;
+//     // left: 0;
+//     // top: 0;
+//     // z-index: 0;
+//     opacity: 0042;
+//     // opacity: 1;
+//     background-image: url(/img/background/pattern6_1png);
+//     background-repeat: repeat;
+//     background-position: left top;
+//     position: absolute;
+//     width: 100%;
+//     height: 925px;
+//     // background-position: 50% 0;
+//     background-size: 40%;
+//     // background-size:contain;
+// }
+
+container {
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    // opacity: 33%;
+    // background: url(//img/first-bgjpg) no-repeat center center;
+    // background-image: linear-gradient(43deg; #4158D0 0%; #C850C0 46%; #FFCC70 100%);
+}
+
+header {
+    // position: sticky;
+    // position: relative;
+    top: 0;
+    z-index: 100;
+}
+header-top {
+    display: flex;
+    justify-content: flex-start;
+    // position: absolute;
+    width: 100%;
+    // height: 100px;
+    // margin: 100px 0 0 0;
+    // background: #000;
+}
+header-top__left {
+    // background-color:#ff0000;
+    // flex: 0 0 100px;
+    flex: 0 0 80px;
+}
+header-left img {
+    // width: 100%;
+    border-radius: 100%;
+    padding: 3px;
+    margin: 2px 0px 0px 2px;
+    // border: 3px solid red;
+    object-fit: cover;
+    width: 95%;
+    background: linear-gradient(135deg, #4acaff, #21d6bf);
+}
+header-top__right {
+    // background-color:#5eff00;
+    flex: 1 0 100px;
+}
+header-right {
+}
+header-right__up-line {
+    // height: 50px;
+    height: 40px;
+    // background-color:#0026ff;
+}
+up-line {
+    display: flex;
+    justify-content: space-between;
+}
+up-line__name {
+    flex: 0 0 250px;
+    // background-color: #ff9900;
+    @include center-text();
+    justify-content: left;
+}
+up-line__name p {
+    font-size: 30px;
+    font-weight: 800;
+    padding: 0px 0px 0px 10px;
+    color: white;
+    white-space: nowrap;
+}
+up-line__socials {
+    flex: 1 0 150px;
+    // background-color: #00e1ff;
+}
+socials {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+[class*="socials__"] {
+    width: 41px;
+}
+[class*="socials__"]:last-child {
+    width: 40px;
+}
+[class*="socials__"]:not(:last-child) {
+    border-right: 1px solid $line;
+}
+// [class*="socials__"]:hover {
+//     // background-color: $hover;
+// }
+socials__mail-text-link {
+    width: 265px;
+    @include center-text();
+    border-bottom: 1px solid $line;
+    top: 1px;
+    position: relative;
+}
+*,
+a,
+p,
+button {
+    cursor: default;
+}
+a {
+    color: white; /* Цвет ссылок */
+    font-size: 17px;
+}
+a:visited {
+    color: #ffffffd8; /* Цвет посещенных ссылок */
+}
+a:active {
+    color: #ffffff81; /* Цвет активных ссылок */
+}
+a:hover {
+    color: #ffffffd8;
+}
+button {
+    color: white; /* Цвет ссылок */
+    font-size: 17px;
+    background: none;
+}
+button:visited {
+    color: #ffffffd8; /* Цвет посещенных ссылок */
+}
+button:active {
+    color: #ffffff81; /* Цвет активных ссылок */
+}
+button:hover {
+    color: #dd1010d8;
+}
+social__btn {
+}
+socials__mail {
+    // background-color: #f700ff;
+}
+socials__skype {
+    // background-color: #3600cc;
+}
+socials__telegram {
+    // background-color: #2d7ffa;
+}
+socials__icon {
+    color: #fff;
+    @include center-text();
+    height: 40px;
+    font-size: 25px;
+    transition: all 01s ease-in-out 0001;
+}
+socials__icon:hover {
+    font-size: 23px;
+
+    background: linear-gradient(135deg, #4acaff, #21d6bf);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+header-right__down-line {
+    height: 40px;
+    // background-color:#0051ff;
+}
+down-line {
+    display: flex;
+    justify-content: space-between;
+}
+down-line__do {
+    flex: 0 0 250px;
+    // background-color: #bdd435;
+    @include center-text();
+    justify-content: left;
+}
+down-line__do p {
+    font-size: 23px;
+    font-weight: 800;
+    padding: 0px 0px 0px 10px;
+    color: $line;
+    white-space: nowrap;
+}
+down-line__free-space {
+    flex: 0 1 250px;
+    // background:#cc00c2;
+}
+down-line__menu {
+    flex: 1 0 200px;
+    // background-color: #fdcd30;
+}
+menu {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid $line;
+}
+menu__element-name {
+    flex: 0 1 0px;
+    // background-color:#0051ff;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 8px 25px 0 25px;
+    // @include center-text();
+    // text-align: center;
+    white-space: nowrap;
+    cursor: default;
+}
+
+/* ============================================================ */
+
+section-1 {
+}
+main-page {
+    // background: #272727;
+    // background-image: linear-gradient(43deg; #4158D0 0%; #C850C0 46%; #FFCC70 100%);
+    // background: url("/img/background/pattern1png") repeat left top;
+    // background-size: 20px;
+    // width: 100%;
+    // height: 1000px;
+    // position: absolute;
+    // top: -100px;
+    // left:0;
+    // object-fit: contain;
+    // width: 1000px; /* Ширина изображений */
+    // height: 1000px; /* Высота изображении */
+    // object-fit: cover; /* Вписываем фотографию в область */
+    // display: flex;
+    // flex-direction: column;
+    position: relative;
+    margin: 0px 0px 0px 0px;
+}
+main-page__about {
+    margin: 40px 0px 0px 0px;
+}
+about {
+}
+about__content {
+    height: 535px;
+    display: flex;
+    // width: 300px;
+    flex-direction: row;
+    justify-content: space-around;
+    // background: #f1c02b33;
+    // padding: 200px 0px 0px 0px;
+    // align-items: center;
+    // border: 1px solid red;
+}
+about__left {
+    flex: 0 0 430px;
+    margin: -75px 0px 0px 50px;
+    min-width: 430px;
+    width: 100px;
+    // @include center-text();
+    // white-space: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // padding-bottom: 100px;
+    align-self: center;
+    font-size: 80px;
+    font-weight: 800;
+    // border: 1px solid red;
+}
+about__right {
+    flex: 0 1 600px;
+    align-self: center;
+    min-width: 500px;
+    // right: 0;
+    // top: 0;
+    // position: absolute;
+    // height: 300px;
+    // border: 1px solid red;
+    // background-size:cover;
+    // background-size:contain;
+    @include center-text();
+    margin: -50px -20px 0px 0px;
+    // border: 1px solid red;
+}
+about__right img {
+    width: 96%;
+    // position: relative;
+    // height: 100%;
+}
+main-page__portfolio {
+    height: 200px;
+}
+portfolio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+}
+portfolio-title {
+    position: relative;
+    flex: 0 0 165%;
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+portfolio-title p {
+    color: #fff;
+    position: absolute;
+}
+
+/* ============================================================ */
+
+swiper-pagination-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+}
+
+:root {
+    --swiper-theme-color: #21d6bf;
+}
+
+swiper-button-container {
+    // border: 1px solid red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+swiper-button {
+    align-self: flex-end;
+    // border: 1px solid red;
+    width: 33%;
+    height: 16%;
+    margin: 30px 0px 0px 0px;
+    @include svg_color(36, 25);
+}
+swiper-button-prev {
+    background: url(https://rescloudinarycom/webalys/image/private/w_200;h_200;ar_1/f_auto/v1/icons/streamline-light/arrows-diagrams/arrows/arrow-left-1-0vx14cbosgra07slqnp2n87upng)
+        no-repeat left center / contain;
+}
+swiper-button-next {
+    background: url(https://rescloudinarycom/webalys/image/private/w_200;h_200;ar_1/f_auto/v1/icons/streamline-light/arrows-diagrams/arrows/arrow-right-1-9gfe2j650wo0gk9frm2xt4npng)
+        no-repeat right center / contain;
+}
+swiper-button-next::after,
+swiper-button-prev::after {
+    color: $line;
+    font-size: 55px;
+    display: none;
+}
+
+swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    line-height: 10px;
+    font-size: 14px;
+    background: $line;
+}
+swiper-pagination-fraction {
+    // border: 1px solid red;
+    // width: 15px;
+    // height: 15px;
+    // line-height: 10px;
+    font-size: 16px;
+    color: $line;
+    margin: 0px 0px 34px 0px;
+}
+swiper-pagination-progressbar {
+    background: rgba(0, 0, 0, 025);
+}
+
+swiper-scrollbar {
+    cursor: pointer;
+    // border: 1px solid red;
+    width: 100%;
+    height: 5px;
+}
+swiper-scrollbar-drag {
+    cursor: pointer;
+    background: $line;
+    // border: 1px solid red;
+    // width: 200px;
+    // height: 10px;
+}
+
+/* ============================================================ */
+
+portfolio-slider {
+    flex: 1 0 250px;
+}
+
+slider-container {
+    width: 0;
+    overflow: hidden;
+    padding: 0 1px;
+}
+
+swiper-container {
+}
+swiper-wrapper {
+}
+swiper-slide {
+}
+
+slider {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &__element {
+        // flex: 0 0 0;
+        background-size: contain;
+        position: relative;
+        height: 200px;
+        border: 1px solid $line;
+        border-bottom: 0px;
+        border-radius: 10px 10px 0 0;
+        // margin: 0px 20px 0px 0px;
+
+        // &:not(:first-child) {
+        //     margin: 0px 10px 0px 10px;
+        // }
+    }
+    &__image-container {
+        // text-align: center;
+        @include center_text();
+        position: relative;
+    }
+    &__link {
+        position: absolute;
+        // top:0;
+        // left:0;
+        @include center-text();
+        font-size: 30px;
+        font-weight: 700;
+        opacity: 0;
+        transition: all 02s ease-in-out;
+        @include text-style-1;
+        backdrop-filter: blur(18px) saturate(75%);
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 10px 0 0;
+        &:hover {
+            font-size: 32px;
+            transition: all 01s ease-in-out;
+            opacity: 1;
+        }
+    }
+    &__image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+/* ============================================================ */
+
+footer {
+    // position: relative;
+    // z-index: 1;
+}
+footer__content {
+    font-size: 14px;
+    @include center-text();
+    height: 40px;
+    width: 100%;
+    border-top: 1px solid $line;
+    font-weight: 700;
+}
+
+/*============================================================sep*/
+
+// …or create a new repository on the command line
+
+// echo "# portfolio_site" >> READMEmd
+// git init
+// git add .
+// git add READMEmd
+// git commit -m "first commit"
+// git branch -M main
+// git remote add origin https://github.com/SerhiCH/webStar.git
+// git push -u origin main
+
+// …or push an existing repository from the command line
+
+// git remote add origin https://github.com/SerhiCH/webStar.git
+// git branch -M main
+// git push -u origin main
+

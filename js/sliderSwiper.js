@@ -53,7 +53,7 @@ new Swiper('.slider-container',{
     loop: true,
     // loopedSlides: 3,
 
-    freeMode: true,
+    // freeMode: true,
 
     // autoplay: {
     //     delay: 1250,
@@ -63,7 +63,7 @@ new Swiper('.slider-container',{
     //     waitForTransition: true,
     // },
 
-    speed: 0,
+    speed: 100,
 
     // effect: 'slide',
     // effect: 'fade',
