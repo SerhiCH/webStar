@@ -1,31 +1,30 @@
 @import "_null";
-@import "effectsscss";
-@import "extensionscss";
+@import "effects.scss";
+@import "extension.scss";
 // @import "_normalize";
 // @import "_sanitize";
-// @import "mediaQueriesscss";
-// @import "glasmorphismscss";
+// @import "mediaQueries.scss";
+// @import "glasmorphism.scss";
 
-// @import url(https://fontsgoogleapiscom/css2?family=Fjalla+One:wght@300;400;600;800&display=swap);
-// @import url(https://fontsgoogleapiscom/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap);
-// @import url(https://fontsgoogleapiscom/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
-@import url(https://fontsgoogleapiscom/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap);
-
+// @import url('https://fonts.googleapis.com/css2?family=Fjalla+One:wght@300;400;600;800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* ============================================================ */
 
-backgroung-img {
-    background: url("//img/_template/Hairypng") no-repeat center top;
+.backgroung-img {
+    background: url("..//img/_template/Hairy.png") no-repeat center top;
     position: fixed;
     position: absolute;
     // background-size: contain;
-    opacity: 025;
+    opacity: 0.25;
     width: 100%;
     height: 5430px;
     top: 0;
     left: 0;
 }
-container {
+.container {
     position: relative;
 }
 
@@ -36,8 +35,8 @@ container {
 // colors
 $orange: #e1b838;
 $background: #272727;
-$hover: rgba(255, 255, 255, 022);
-$hover-menu: rgba(255, 255, 255, 01);
+$hover: rgba(255, 255, 255, 0.22);
+$hover-menu: rgba(255, 255, 255, 0.1);
 $starblue: #4acaff;
 $stargreen: #21d6bf;
 $line: #21d6bf;
@@ -62,7 +61,7 @@ $line: rgb(11, 110, 96);
     }
 }
 @mixin svg_color($d, $b: 50) {
-    filter: invert(1) brightness(50%) sepia(1) hue-rotate(($d * 36) + deg)
+    filter: invert(1) brightness(50%) sepia(1) hue-rotate(($d * 3.6) + deg)
         saturate(400%) brightness($b * 2%);
 }
 
@@ -81,24 +80,24 @@ $line: rgb(11, 110, 96);
     text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
 }
-// flex-display(@display: flex) {
+// .flex-display(@display: flex) {
 //     display: ~"-webkit-@{display}";
 //     display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
 //     display: ~"-ms-@{display}"; // IE11
 //     display: @display;
 // }
 
-/*============================================================sep*/
+/* ============================================================ */
 
 body {
-    font-family: Roboto;
+    font-family: "Roboto";
     background: $background;
     color: white;
 }
 
-background-back-image {
-    // background-image: linear-gradient(43deg; #4158D0 0%; #C850C0 46%; #FFCC70 100%);
-    background: url(//img/background/backjpg) repeat left top;
+.background-back-image {
+    // background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background: url("..//img/background/back.jpg") repeat left top;
     // background-repeat: repeat;
     // background-position: left top;
     position: absolute;
@@ -114,26 +113,26 @@ background-back-image {
     // background-size:cover;
     // background-size:contain;
     // background-size: auto 100%;
-    // opacity: 0075;
-    // object-fit: cover; /* Вписываем фотографию в область */
+    // opacity: 0.075;
+    // object-fit: cover; /* Р’РїРёСЃС‹РІР°РµРј С„РѕС‚РѕРіСЂР°С„РёСЋ РІ РѕР±Р»Р°СЃС‚СЊ */
 }
-background-back-image::before {
+.background-back-image::before {
     content: "";
     position: absolute;
     backdrop-filter: blur(2px) saturate(75%);
-    background-color: rgba(255, 255, 255, 004);
+    background-color: rgba(255, 255, 255, 0.04);
     width: 100%;
     height: 100%;
 }
-// background-back-image:before {
-//     content: ;
+// .background-back-image:before {
+//     content: '';
 //     // display: block;
 //     // left: 0;
 //     // top: 0;
 //     // z-index: 0;
-//     opacity: 0042;
+//     opacity: 0.042;
 //     // opacity: 1;
-//     background-image: url(/img/background/pattern6_1png);
+//     background-image: url('/img/background/pattern6_1.png');
 //     background-repeat: repeat;
 //     background-position: left top;
 //     position: absolute;
@@ -144,22 +143,22 @@ background-back-image::before {
 //     // background-size:contain;
 // }
 
-container {
+.container {
     max-width: 1170px;
     margin: 0 auto;
     position: relative;
     // opacity: 33%;
-    // background: url(//img/first-bgjpg) no-repeat center center;
-    // background-image: linear-gradient(43deg; #4158D0 0%; #C850C0 46%; #FFCC70 100%);
+    // background: url(..//img/first-bg.jpg) no-repeat center center;
+    // background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 
-header {
+.header {
     // position: sticky;
     // position: relative;
     top: 0;
     z-index: 100;
 }
-header-top {
+.header-top {
     display: flex;
     justify-content: flex-start;
     // position: absolute;
@@ -168,12 +167,12 @@ header-top {
     // margin: 100px 0 0 0;
     // background: #000;
 }
-header-top__left {
+.header-top__left {
     // background-color:#ff0000;
     // flex: 0 0 100px;
     flex: 0 0 80px;
 }
-header-left img {
+.header-left img {
     // width: 100%;
     border-radius: 100%;
     padding: 3px;
@@ -183,39 +182,39 @@ header-left img {
     width: 95%;
     background: linear-gradient(135deg, #4acaff, #21d6bf);
 }
-header-top__right {
+.header-top__right {
     // background-color:#5eff00;
     flex: 1 0 100px;
 }
-header-right {
+.header-right {
 }
-header-right__up-line {
+.header-right__up-line {
     // height: 50px;
     height: 40px;
     // background-color:#0026ff;
 }
-up-line {
+.up-line {
     display: flex;
     justify-content: space-between;
 }
-up-line__name {
+.up-line__name {
     flex: 0 0 250px;
     // background-color: #ff9900;
     @include center-text();
     justify-content: left;
 }
-up-line__name p {
+.up-line__name p {
     font-size: 30px;
     font-weight: 800;
     padding: 0px 0px 0px 10px;
     color: white;
     white-space: nowrap;
 }
-up-line__socials {
+.up-line__socials {
     flex: 1 0 150px;
     // background-color: #00e1ff;
 }
-socials {
+.socials {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
@@ -232,7 +231,7 @@ socials {
 // [class*="socials__"]:hover {
 //     // background-color: $hover;
 // }
-socials__mail-text-link {
+.socials__mail-text-link {
     width: 265px;
     @include center-text();
     border-bottom: 1px solid $line;
@@ -246,51 +245,51 @@ button {
     cursor: default;
 }
 a {
-    color: white; /* Цвет ссылок */
+    color: white; /* Р¦РІРµС‚ СЃСЃС‹Р»РѕРє */
     font-size: 17px;
 }
 a:visited {
-    color: #ffffffd8; /* Цвет посещенных ссылок */
+    color: #ffffffd8; /* Р¦РІРµС‚ РїРѕСЃРµС‰РµРЅРЅС‹С… СЃСЃС‹Р»РѕРє */
 }
 a:active {
-    color: #ffffff81; /* Цвет активных ссылок */
+    color: #ffffff81; /* Р¦РІРµС‚ Р°РєС‚РёРІРЅС‹С… СЃСЃС‹Р»РѕРє */
 }
 a:hover {
     color: #ffffffd8;
 }
 button {
-    color: white; /* Цвет ссылок */
+    color: white; /* Р¦РІРµС‚ СЃСЃС‹Р»РѕРє */
     font-size: 17px;
     background: none;
 }
 button:visited {
-    color: #ffffffd8; /* Цвет посещенных ссылок */
+    color: #ffffffd8; /* Р¦РІРµС‚ РїРѕСЃРµС‰РµРЅРЅС‹С… СЃСЃС‹Р»РѕРє */
 }
 button:active {
-    color: #ffffff81; /* Цвет активных ссылок */
+    color: #ffffff81; /* Р¦РІРµС‚ Р°РєС‚РёРІРЅС‹С… СЃСЃС‹Р»РѕРє */
 }
 button:hover {
     color: #dd1010d8;
 }
-social__btn {
+.social__btn {
 }
-socials__mail {
+.socials__mail {
     // background-color: #f700ff;
 }
-socials__skype {
+.socials__skype {
     // background-color: #3600cc;
 }
-socials__telegram {
+.socials__telegram {
     // background-color: #2d7ffa;
 }
-socials__icon {
+.socials__icon {
     color: #fff;
     @include center-text();
     height: 40px;
     font-size: 25px;
-    transition: all 01s ease-in-out 0001;
+    transition: all 0.1s ease-in-out 0.001;
 }
-socials__icon:hover {
+.socials__icon:hover {
     font-size: 23px;
 
     background: linear-gradient(135deg, #4acaff, #21d6bf);
@@ -299,41 +298,41 @@ socials__icon:hover {
     text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
 }
-header-right__down-line {
+.header-right__down-line {
     height: 40px;
     // background-color:#0051ff;
 }
-down-line {
+.down-line {
     display: flex;
     justify-content: space-between;
 }
-down-line__do {
+.down-line__do {
     flex: 0 0 250px;
     // background-color: #bdd435;
     @include center-text();
     justify-content: left;
 }
-down-line__do p {
+.down-line__do p {
     font-size: 23px;
     font-weight: 800;
     padding: 0px 0px 0px 10px;
     color: $line;
     white-space: nowrap;
 }
-down-line__free-space {
+.down-line__free-space {
     flex: 0 1 250px;
     // background:#cc00c2;
 }
-down-line__menu {
+.down-line__menu {
     flex: 1 0 200px;
     // background-color: #fdcd30;
 }
-menu {
+.menu {
     display: flex;
     justify-content: space-around;
     border-top: 1px solid $line;
 }
-menu__element-name {
+.menu__element-name {
     flex: 0 1 0px;
     // background-color:#0051ff;
     font-weight: 600;
@@ -347,12 +346,12 @@ menu__element-name {
 
 /* ============================================================ */
 
-section-1 {
+.section-1 {
 }
-main-page {
+.main-page {
     // background: #272727;
-    // background-image: linear-gradient(43deg; #4158D0 0%; #C850C0 46%; #FFCC70 100%);
-    // background: url("/img/background/pattern1png") repeat left top;
+    // background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    // background: url("/img/background/pattern1.png") repeat left top;
     // background-size: 20px;
     // width: 100%;
     // height: 1000px;
@@ -360,20 +359,20 @@ main-page {
     // top: -100px;
     // left:0;
     // object-fit: contain;
-    // width: 1000px; /* Ширина изображений */
-    // height: 1000px; /* Высота изображении */
-    // object-fit: cover; /* Вписываем фотографию в область */
+    // width: 1000px; /* РЁРёСЂРёРЅР° РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
+    // height: 1000px; /* Р’С‹СЃРѕС‚Р° РёР·РѕР±СЂР°Р¶РµРЅРёРё */
+    // object-fit: cover; /* Р’РїРёСЃС‹РІР°РµРј С„РѕС‚РѕРіСЂР°С„РёСЋ РІ РѕР±Р»Р°СЃС‚СЊ */
     // display: flex;
     // flex-direction: column;
     position: relative;
     margin: 0px 0px 0px 0px;
 }
-main-page__about {
+.main-page__about {
     margin: 40px 0px 0px 0px;
 }
-about {
+.about {
 }
-about__content {
+.about__content {
     height: 535px;
     display: flex;
     // width: 300px;
@@ -384,7 +383,7 @@ about__content {
     // align-items: center;
     // border: 1px solid red;
 }
-about__left {
+.about__left {
     flex: 0 0 430px;
     margin: -75px 0px 0px 50px;
     min-width: 430px;
@@ -400,7 +399,7 @@ about__left {
     font-weight: 800;
     // border: 1px solid red;
 }
-about__right {
+.about__right {
     flex: 0 1 600px;
     align-self: center;
     min-width: 500px;
@@ -415,36 +414,36 @@ about__right {
     margin: -50px -20px 0px 0px;
     // border: 1px solid red;
 }
-about__right img {
+.about__right img {
     width: 96%;
     // position: relative;
     // height: 100%;
 }
-main-page__portfolio {
+.main-page__portfolio {
     height: 200px;
 }
-portfolio {
+.portfolio {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     position: relative;
 }
-portfolio-title {
+.portfolio-title {
     position: relative;
-    flex: 0 0 165%;
+    flex: 0 0 16.5%;
     // border: 1px solid red;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
-portfolio-title p {
+.portfolio-title p {
     color: #fff;
     position: absolute;
 }
 
 /* ============================================================ */
 
-swiper-pagination-container {
+.swiper-pagination-container {
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -459,7 +458,7 @@ swiper-pagination-container {
     --swiper-theme-color: #21d6bf;
 }
 
-swiper-button-container {
+.swiper-button-container {
     // border: 1px solid red;
     width: 100%;
     height: 100%;
@@ -467,7 +466,7 @@ swiper-button-container {
     flex-direction: row;
     justify-content: flex-start;
 }
-swiper-button {
+.swiper-button {
     align-self: flex-end;
     // border: 1px solid red;
     width: 33%;
@@ -475,29 +474,29 @@ swiper-button {
     margin: 30px 0px 0px 0px;
     @include svg_color(36, 25);
 }
-swiper-button-prev {
-    background: url(https://rescloudinarycom/webalys/image/private/w_200;h_200;ar_1/f_auto/v1/icons/streamline-light/arrows-diagrams/arrows/arrow-left-1-0vx14cbosgra07slqnp2n87upng)
+.swiper-button-prev {
+    background: url("https://res.cloudinary.com/webalys/image/private/w_200,h_200,ar_1/f_auto/v1/icons/streamline-light/arrows-diagrams/arrows/arrow-left-1-0vx14cbosgra07slqnp2n87u.png")
         no-repeat left center / contain;
 }
-swiper-button-next {
-    background: url(https://rescloudinarycom/webalys/image/private/w_200;h_200;ar_1/f_auto/v1/icons/streamline-light/arrows-diagrams/arrows/arrow-right-1-9gfe2j650wo0gk9frm2xt4npng)
+.swiper-button-next {
+    background: url("https://res.cloudinary.com/webalys/image/private/w_200,h_200,ar_1/f_auto/v1/icons/streamline-light/arrows-diagrams/arrows/arrow-right-1-9gfe2j650wo0gk9frm2xt4n.png")
         no-repeat right center / contain;
 }
-swiper-button-next::after,
-swiper-button-prev::after {
+.swiper-button-next::after,
+.swiper-button-prev::after {
     color: $line;
     font-size: 55px;
     display: none;
 }
 
-swiper-pagination-bullet {
+.swiper-pagination-bullet {
     width: 15px;
     height: 15px;
     line-height: 10px;
     font-size: 14px;
     background: $line;
 }
-swiper-pagination-fraction {
+.swiper-pagination-fraction {
     // border: 1px solid red;
     // width: 15px;
     // height: 15px;
@@ -506,17 +505,17 @@ swiper-pagination-fraction {
     color: $line;
     margin: 0px 0px 34px 0px;
 }
-swiper-pagination-progressbar {
-    background: rgba(0, 0, 0, 025);
+.swiper-pagination-progressbar {
+    background: rgba(0, 0, 0, 0.25);
 }
 
-swiper-scrollbar {
+.swiper-scrollbar {
     cursor: pointer;
     // border: 1px solid red;
     width: 100%;
     height: 5px;
 }
-swiper-scrollbar-drag {
+.swiper-scrollbar-drag {
     cursor: pointer;
     background: $line;
     // border: 1px solid red;
@@ -526,24 +525,24 @@ swiper-scrollbar-drag {
 
 /* ============================================================ */
 
-portfolio-slider {
+.portfolio-slider {
     flex: 1 0 250px;
 }
 
-slider-container {
+.slider-container {
     width: 0;
     overflow: hidden;
     padding: 0 1px;
 }
 
-swiper-container {
+.swiper-container {
 }
-swiper-wrapper {
+.swiper-wrapper {
 }
-swiper-slide {
+.swiper-slide {
 }
 
-slider {
+.slider {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -574,7 +573,7 @@ slider {
         font-size: 30px;
         font-weight: 700;
         opacity: 0;
-        transition: all 02s ease-in-out;
+        transition: all 0.2s ease-in-out;
         @include text-style-1;
         backdrop-filter: blur(18px) saturate(75%);
         width: 100%;
@@ -582,7 +581,7 @@ slider {
         border-radius: 10px 10px 0 0;
         &:hover {
             font-size: 32px;
-            transition: all 01s ease-in-out;
+            transition: all 0.1s ease-in-out;
             opacity: 1;
         }
     }
@@ -596,11 +595,11 @@ slider {
 
 /* ============================================================ */
 
-footer {
+.footer {
     // position: relative;
     // z-index: 1;
 }
-footer__content {
+.footer__content {
     font-size: 14px;
     @include center-text();
     height: 40px;
@@ -628,9 +627,4 @@ footer__content {
 // git branch -M main
 // git push -u origin main
 
-
-
 // git clone https://github.com/SerhiCH/webStar.git
-
-
-
