@@ -4,14 +4,10 @@
 // @import "_normalize";
 // @import "_sanitize";
 // @import "mediaQueries.scss";
-// @import "glasmorphism.scss";
 
-// @import url('https://fonts.googleapis.com/css2?family=Fjalla+One:wght@300;400;600;800&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* ============================================================ */
+/*============================================================separate*/
 
 .backgroung-img {
     background: url("..//img/_template/Hairy.png") no-repeat center top;
@@ -30,7 +26,7 @@
 
 // * {border: 1px solid red;}
 
-/* ============================================================ */
+/*============================================================separate*/
 
 // colors
 $orange: #e1b838;
@@ -39,7 +35,7 @@ $hover: rgba(255, 255, 255, 0.22);
 $hover-menu: rgba(255, 255, 255, 0.1);
 $starblue: #4acaff;
 $stargreen: #21d6bf;
-$line: #21d6bf;
+// $line: #21d6bf;
 $line: rgb(11, 110, 96);
 
 // mixins
@@ -80,14 +76,8 @@ $line: rgb(11, 110, 96);
     text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
 }
-// .flex-display(@display: flex) {
-//     display: ~"-webkit-@{display}";
-//     display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
-//     display: ~"-ms-@{display}"; // IE11
-//     display: @display;
-// }
 
-/* ============================================================ */
+/*============================================================separate*/
 
 body {
     font-family: "Roboto";
@@ -97,7 +87,8 @@ body {
 
 .background-back-image {
     // background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    background: url("..//img/background/back.jpg") repeat left top;
+    // background: url("..//img/background/back.jpg") repeat left top;
+    background: url("..//img/background/back2.jpg") no-repeat left top;
     // background-repeat: repeat;
     // background-position: left top;
     position: absolute;
@@ -107,20 +98,21 @@ body {
     // background-position: center top;
     // height: 100%;
     // height: 100vh;
-    // background-size: 30%;
+    // background-size: 100vw;
     // background-size: auto;
     // background-size: 150%;
-    // background-size:cover;
+    background-size: cover;
     // background-size:contain;
     // background-size: auto 100%;
     // opacity: 0.075;
-    // object-fit: cover; /* Р’РїРёСЃС‹РІР°РµРј С„РѕС‚РѕРіСЂР°С„РёСЋ РІ РѕР±Р»Р°СЃС‚СЊ */
+    // object-fit: cover;
+    z-index: -100;
 }
 .background-back-image::before {
     content: "";
     position: absolute;
-    backdrop-filter: blur(2px) saturate(75%);
-    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(4px) saturate(85%);
+    background-color: rgba(255, 255, 255, 0.01);
     width: 100%;
     height: 100%;
 }
@@ -324,8 +316,8 @@ button:hover {
     // background:#cc00c2;
 }
 .down-line__menu {
-    flex: 1 0 200px;
-    // background-color: #fdcd30;
+    flex: 1 0 80px;
+    // background-color: #fdcd3080;
 }
 .menu {
     display: flex;
@@ -344,7 +336,7 @@ button:hover {
     cursor: default;
 }
 
-/* ============================================================ */
+/*============================================================separate*/
 
 .section-1 {
 }
@@ -386,8 +378,8 @@ button:hover {
 .about__left {
     flex: 0 0 430px;
     margin: -75px 0px 0px 50px;
-    min-width: 430px;
-    width: 100px;
+    // min-width: 430px;
+    // width: 100px;
     // @include center-text();
     // white-space: wrap;
     display: flex;
@@ -398,14 +390,16 @@ button:hover {
     font-size: 80px;
     font-weight: 800;
     // border: 1px solid red;
+    z-index: 0;
 }
 .about__right {
+    position: relative;
     flex: 0 1 600px;
     align-self: center;
-    min-width: 500px;
+    // min-width: 100px;
+    // max-width: 600px;
     // right: 0;
     // top: 0;
-    // position: absolute;
     // height: 300px;
     // border: 1px solid red;
     // background-size:cover;
@@ -413,6 +407,8 @@ button:hover {
     @include center-text();
     margin: -50px -20px 0px 0px;
     // border: 1px solid red;
+    z-index: -1;
+    width: 90vw;
 }
 .about__right img {
     width: 96%;
@@ -523,7 +519,7 @@ button:hover {
     // height: 10px;
 }
 
-/* ============================================================ */
+/*============================================================separate*/
 
 .portfolio-slider {
     flex: 1 0 250px;
@@ -575,7 +571,7 @@ button:hover {
         opacity: 0;
         transition: all 0.2s ease-in-out;
         @include text-style-1;
-        backdrop-filter: blur(18px) saturate(75%);
+        backdrop-filter: blur(16px) saturate(85%);
         width: 100%;
         height: 100%;
         border-radius: 10px 10px 0 0;
@@ -593,7 +589,7 @@ button:hover {
     }
 }
 
-/* ============================================================ */
+/*============================================================separate*/
 
 .footer {
     // position: relative;
@@ -608,7 +604,7 @@ button:hover {
     font-weight: 700;
 }
 
-/*============================================================sep*/
+/*============================================================separate*/
 
 // …or create a new repository on the command line
 
@@ -628,3 +624,29 @@ button:hover {
 // git push -u origin main
 
 // git clone https://github.com/SerhiCH/webStar.git
+
+/*============================================================separate*/
+
+@media screen and (max-width: 991.98px) {
+    .about__right {
+        position: absolute;
+        opacity: 0.5;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .socials__mail-text-link {
+        display: none;
+    }
+    .down-line__menu {
+        flex: 0 0 80px;
+    }
+    .about__left {
+        flex: 0 0 88%;
+        font-size: 10.4vw;
+        padding: 0 0 0 15.5%;
+    }
+    .about__right {
+        width: 90vw;
+    }
+}

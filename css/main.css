@@ -205,7 +205,7 @@ div, p, input, button {
   clear: both;
 }
 
-/* ============================================================ */
+/*============================================================separate*/
 .backgroung-img {
   background: url("..//img/_template/Hairy.png") no-repeat center top;
   position: fixed;
@@ -221,8 +221,8 @@ div, p, input, button {
   position: relative;
 }
 
-/* ============================================================ */
-/* ============================================================ */
+/*============================================================separate*/
+/*============================================================separate*/
 body {
   font-family: "Roboto";
   background: #272727;
@@ -230,18 +230,20 @@ body {
 }
 
 .background-back-image {
-  background: url("..//img/background/back.jpg") repeat left top;
+  background: url("..//img/background/back2.jpg") no-repeat left top;
   position: absolute;
   width: 100%;
   height: 895px;
+  background-size: cover;
+  z-index: -100;
 }
 
 .background-back-image::before {
   content: "";
   position: absolute;
-  -webkit-backdrop-filter: blur(2px) saturate(75%);
-          backdrop-filter: blur(2px) saturate(75%);
-  background-color: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(4px) saturate(85%);
+          backdrop-filter: blur(4px) saturate(85%);
+  background-color: rgba(255, 255, 255, 0.01);
   width: 100%;
   height: 100%;
 }
@@ -505,8 +507,8 @@ button:hover {
 
 .down-line__menu {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 200px;
-          flex: 1 0 200px;
+      -ms-flex: 1 0 80px;
+          flex: 1 0 80px;
 }
 
 .menu {
@@ -529,7 +531,7 @@ button:hover {
   cursor: default;
 }
 
-/* ============================================================ */
+/*============================================================separate*/
 .main-page {
   position: relative;
   margin: 0px 0px 0px 0px;
@@ -557,8 +559,6 @@ button:hover {
       -ms-flex: 0 0 430px;
           flex: 0 0 430px;
   margin: -75px 0px 0px 50px;
-  min-width: 430px;
-  width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -573,15 +573,16 @@ button:hover {
       align-self: center;
   font-size: 80px;
   font-weight: 800;
+  z-index: 0;
 }
 
 .about__right {
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 600px;
           flex: 0 1 600px;
   -ms-flex-item-align: center;
       align-self: center;
-  min-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -593,6 +594,8 @@ button:hover {
           justify-content: center;
   text-align: center;
   margin: -50px -20px 0px 0px;
+  z-index: -1;
+  width: 90vw;
 }
 
 .about__right img {
@@ -733,7 +736,7 @@ button:hover {
   background: #0b6e60;
 }
 
-/* ============================================================ */
+/*============================================================separate*/
 .portfolio-slider {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 250px;
@@ -807,8 +810,8 @@ button:hover {
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   background-color: black;
-  -webkit-backdrop-filter: blur(18px) saturate(75%);
-          backdrop-filter: blur(18px) saturate(75%);
+  -webkit-backdrop-filter: blur(16px) saturate(85%);
+          backdrop-filter: blur(16px) saturate(85%);
   width: 100%;
   height: 100%;
   border-radius: 10px 10px 0 0;
@@ -830,7 +833,7 @@ button:hover {
   border-radius: 10px 10px 0 0;
 }
 
-/* ============================================================ */
+/*============================================================separate*/
 .footer__content {
   font-size: 14px;
   display: -webkit-box;
@@ -849,4 +852,32 @@ button:hover {
   font-weight: 700;
 }
 
-/*============================================================sep*/
+/*============================================================separate*/
+/*============================================================separate*/
+@media screen and (max-width: 991.98px) {
+  .about__right {
+    position: absolute;
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .socials__mail-text-link {
+    display: none;
+  }
+  .down-line__menu {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 80px;
+            flex: 0 0 80px;
+  }
+  .about__left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 88%;
+            flex: 0 0 88%;
+    font-size: 10.4vw;
+    padding: 0 0 0 15.5%;
+  }
+  .about__right {
+    width: 90vw;
+  }
+}
