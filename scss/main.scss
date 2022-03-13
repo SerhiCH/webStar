@@ -230,35 +230,48 @@ body {
     top: 1px;
     position: relative;
 }
+
 *,
+i,
 a,
 p,
 button {
     cursor: default;
 }
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active,
+a:focus,
+i {
+    cursor: pointer;
+}
+
 a {
-    color: white; /* Р¦РІРµС‚ СЃСЃС‹Р»РѕРє */
+    color: white;
     font-size: 17px;
 }
 a:visited {
-    color: #ffffffd8; /* Р¦РІРµС‚ РїРѕСЃРµС‰РµРЅРЅС‹С… СЃСЃС‹Р»РѕРє */
+    color: #ffffffd8
 }
 a:active {
-    color: #ffffff81; /* Р¦РІРµС‚ Р°РєС‚РёРІРЅС‹С… СЃСЃС‹Р»РѕРє */
+    color: #ffffff81;
 }
 a:hover {
     color: #ffffffd8;
 }
 button {
-    color: white; /* Р¦РІРµС‚ СЃСЃС‹Р»РѕРє */
+    color: white;
     font-size: 17px;
     background: none;
 }
 button:visited {
-    color: #ffffffd8; /* Р¦РІРµС‚ РїРѕСЃРµС‰РµРЅРЅС‹С… СЃСЃС‹Р»РѕРє */
+    color: #ffffffd8;
 }
 button:active {
-    color: #ffffff81; /* Р¦РІРµС‚ Р°РєС‚РёРІРЅС‹С… СЃСЃС‹Р»РѕРє */
+    color: #ffffff81;
 }
 button:hover {
     color: #dd1010d8;
@@ -650,4 +663,3 @@ button:hover {
         width: 90vw;
     }
 }
-
