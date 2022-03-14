@@ -5,12 +5,13 @@
 // @import "_sanitize";
 // @import "mediaQueries.scss";
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /*============================================================separate*/
 
 .backgroung-img {
-    background: url("..//img/_template/Hairy.png") no-repeat center top;
+    // background: url("..//img/_template/Hairy.png") no-repeat center top;
     position: fixed;
     position: absolute;
     // background-size: contain;
@@ -80,7 +81,8 @@ $line: rgb(11, 110, 96);
 /*============================================================separate*/
 
 body {
-    font-family: "Roboto";
+    // font-family: "Roboto";
+    font-family: "Poppins";
     background: $background;
     color: white;
 }
@@ -201,6 +203,7 @@ body {
     padding: 0px 0px 0px 10px;
     color: white;
     white-space: nowrap;
+    letter-spacing: 0.001em;
 }
 .up-line__socials {
     flex: 1 0 150px;
@@ -229,6 +232,9 @@ body {
     border-bottom: 1px solid $line;
     top: 1px;
     position: relative;
+    & a {
+        font-size: 15px;
+    }
 }
 
 *,
@@ -254,7 +260,7 @@ a {
     font-size: 17px;
 }
 a:visited {
-    color: #ffffffd8
+    color: #ffffffd8;
 }
 a:active {
     color: #ffffff81;
@@ -295,7 +301,7 @@ button:hover {
     transition: all 0.1s ease-in-out 0.001;
 }
 .socials__icon:hover {
-    font-size: 23px;
+    transform: scale(0.945);
 
     background: linear-gradient(135deg, #4acaff, #21d6bf);
     background-clip: text;
@@ -323,6 +329,7 @@ button:hover {
     padding: 0px 0px 0px 10px;
     color: $line;
     white-space: nowrap;
+    letter-spacing: 0.177em;
 }
 .down-line__free-space {
     flex: 0 1 250px;
@@ -389,7 +396,8 @@ button:hover {
     // border: 1px solid red;
 }
 .about__left {
-    flex: 0 0 430px;
+    flex: 0 0 530px;
+    border: 1px solid red;
     margin: -75px 0px 0px 50px;
     // min-width: 430px;
     // width: 100px;
@@ -656,8 +664,8 @@ button:hover {
     }
     .about__left {
         flex: 0 0 88%;
-        font-size: 10.4vw;
-        padding: 0 0 0 15.5%;
+        font-size: 10.43vw;
+        padding: 0 0 0 8.7%;
     }
     .about__right {
         width: 90vw;

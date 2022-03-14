@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -206,7 +206,6 @@ div, p, input, button {
 
 /*============================================================separate*/
 .backgroung-img {
-  background: url("..//img/_template/Hairy.png") no-repeat center top;
   position: fixed;
   position: absolute;
   opacity: 0.25;
@@ -223,7 +222,7 @@ div, p, input, button {
 /*============================================================separate*/
 /*============================================================separate*/
 body {
-  font-family: "Roboto";
+  font-family: "Poppins";
   background: #272727;
   color: white;
 }
@@ -330,6 +329,7 @@ body {
   padding: 0px 0px 0px 10px;
   color: white;
   white-space: nowrap;
+  letter-spacing: 0.001em;
 }
 
 .up-line__socials {
@@ -378,6 +378,10 @@ body {
   border-bottom: 1px solid #0b6e60;
   top: 1px;
   position: relative;
+}
+
+.socials__mail-text-link a {
+  font-size: 15px;
 }
 
 *,
@@ -453,7 +457,9 @@ button:hover {
 }
 
 .socials__icon:hover {
-  font-size: 23px;
+  -webkit-transform: scale(0.945);
+      -ms-transform: scale(0.945);
+          transform: scale(0.945);
   background: -webkit-linear-gradient(315deg, #4acaff, #21d6bf);
   background: -o-linear-gradient(315deg, #4acaff, #21d6bf);
   background: linear-gradient(135deg, #4acaff, #21d6bf);
@@ -501,6 +507,7 @@ button:hover {
   padding: 0px 0px 0px 10px;
   color: #0b6e60;
   white-space: nowrap;
+  letter-spacing: 0.177em;
 }
 
 .down-line__free-space {
@@ -560,8 +567,9 @@ button:hover {
 
 .about__left {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 430px;
-          flex: 0 0 430px;
+      -ms-flex: 0 0 530px;
+          flex: 0 0 530px;
+  border: 1px solid red;
   margin: -75px 0px 0px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -878,8 +886,8 @@ button:hover {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 88%;
             flex: 0 0 88%;
-    font-size: 10.4vw;
-    padding: 0 0 0 15.5%;
+    font-size: 10.43vw;
+    padding: 0 0 0 8.7%;
   }
   .about__right {
     width: 90vw;
