@@ -222,7 +222,7 @@ div, p, input, button {
 /*============================================================separate*/
 /*============================================================separate*/
 body {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   background: #272727;
   color: white;
 }
