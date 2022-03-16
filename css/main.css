@@ -88,20 +88,9 @@ div, p, input, button {
 
 /* ============================================================ */
 .text-style-1 {
-  background: -webkit-linear-gradient(315deg, #4acaff, #21d6bf);
-  background: -o-linear-gradient(315deg, #4acaff, #21d6bf);
-  background: linear-gradient(135deg, #4acaff, #21d6bf);
-  background-clip: text;
-  -webkit-background-clip: text;
-  text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-style-2 {
-  background: -webkit-gradient(linear, left top, right top, from(#0f11ee), to(#ee7f0c));
-  background: -webkit-linear-gradient(left, #0f11ee, #ee7f0c);
-  background: -o-linear-gradient(left, #0f11ee, #ee7f0c);
-  background: linear-gradient(90deg, #0f11ee, #ee7f0c);
+  background: -webkit-linear-gradient(315deg, #ff9945 0%, #f53e90 15%, #3d8af5 75%);
+  background: -o-linear-gradient(315deg, #ff9945 0%, #f53e90 15%, #3d8af5 75%);
+  background: linear-gradient(135deg, #ff9945 0%, #f53e90 15%, #3d8af5 75%);
   background-clip: text;
   -webkit-background-clip: text;
   text-fill-color: transparent;
@@ -115,7 +104,7 @@ div, p, input, button {
 
 .hover1::before,
 .hover1::after {
-  content: "";
+  content: '';
   pointer-events: none;
   position: absolute;
   border: 0px solid transparent;
@@ -141,7 +130,6 @@ div, p, input, button {
 
 .hover1:hover::before,
 .hover1:hover::after {
-  border-color: #21d6bf;
   -webkit-transition: border-color 0s, width 0s, height 0.1s;
   -o-transition: border-color 0s, width 0s, height 0.1s;
   transition: border-color 0s, width 0s, height 0.1s;
@@ -222,7 +210,7 @@ div, p, input, button {
 /*============================================================separate*/
 /*============================================================separate*/
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #272727;
   color: white;
 }
@@ -237,7 +225,7 @@ body {
 }
 
 .background-back-image::before {
-  content: "";
+  content: '';
   position: absolute;
   -webkit-backdrop-filter: blur(4px) saturate(85%);
           backdrop-filter: blur(4px) saturate(85%);
@@ -280,9 +268,9 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   width: 95%;
-  background: -webkit-linear-gradient(315deg, #4acaff, #21d6bf);
-  background: -o-linear-gradient(315deg, #4acaff, #21d6bf);
-  background: linear-gradient(135deg, #4acaff, #21d6bf);
+  background: -webkit-linear-gradient(315deg, #ff9945 11%, #f53e90 25%, #3d8af5 88%);
+  background: -o-linear-gradient(315deg, #ff9945 11%, #f53e90 25%, #3d8af5 88%);
+  background: linear-gradient(135deg, #ff9945 11%, #f53e90 25%, #3d8af5 88%);
 }
 
 .header-top__right {
@@ -351,16 +339,16 @@ body {
           flex-direction: row;
 }
 
-[class*="socials__"] {
+[class*='socials__'] {
   width: 41px;
 }
 
-[class*="socials__"]:last-child {
+[class*='socials__']:last-child {
   width: 40px;
 }
 
-[class*="socials__"]:not(:last-child) {
-  border-right: 1px solid #0b6e60;
+[class*='socials__']:not(:last-child) {
+  border-right: 1px solid #cc8869;
 }
 
 .socials__mail-text-link {
@@ -375,7 +363,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  border-bottom: 1px solid #0b6e60;
+  border-bottom: 1px solid #cc8869;
   top: 1px;
   position: relative;
 }
@@ -460,9 +448,9 @@ button:hover {
   -webkit-transform: scale(0.945);
       -ms-transform: scale(0.945);
           transform: scale(0.945);
-  background: -webkit-linear-gradient(315deg, #4acaff, #21d6bf);
-  background: -o-linear-gradient(315deg, #4acaff, #21d6bf);
-  background: linear-gradient(135deg, #4acaff, #21d6bf);
+  background: -webkit-linear-gradient(315deg, #ff9945 0%, #f53e90 15%, #3d8af5 75%);
+  background: -o-linear-gradient(315deg, #ff9945 0%, #f53e90 15%, #3d8af5 75%);
+  background: linear-gradient(135deg, #ff9945 0%, #f53e90 15%, #3d8af5 75%);
   background-clip: text;
   -webkit-background-clip: text;
   text-fill-color: transparent;
@@ -505,7 +493,7 @@ button:hover {
   font-size: 23px;
   font-weight: 800;
   padding: 0px 0px 0px 10px;
-  color: #0b6e60;
+  color: #cc8869;
   white-space: nowrap;
   letter-spacing: 0.177em;
 }
@@ -528,7 +516,7 @@ button:hover {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border-top: 1px solid #0b6e60;
+  border-top: 1px solid #cc8869;
 }
 
 .menu__element-name {
@@ -675,7 +663,7 @@ button:hover {
 }
 
 :root {
-  --swiper-theme-color: #21d6bf;
+  --swiper-theme-color: $line;
 }
 
 .swiper-button-container {
@@ -699,8 +687,8 @@ button:hover {
   width: 33%;
   height: 16%;
   margin: 30px 0px 0px 0px;
-  -webkit-filter: invert(1) brightness(50%) sepia(1) hue-rotate(129.6deg) saturate(400%) brightness(50%);
-          filter: invert(1) brightness(50%) sepia(1) hue-rotate(129.6deg) saturate(400%) brightness(50%);
+  -webkit-filter: invert(69%) sepia(12%) saturate(1875%) hue-rotate(330deg) brightness(92%) contrast(89%);
+          filter: invert(69%) sepia(12%) saturate(1875%) hue-rotate(330deg) brightness(92%) contrast(89%);
 }
 
 .swiper-button-prev {
@@ -713,7 +701,7 @@ button:hover {
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  color: #0b6e60;
+  color: #cc8869;
   font-size: 55px;
   display: none;
 }
@@ -723,12 +711,12 @@ button:hover {
   height: 15px;
   line-height: 10px;
   font-size: 14px;
-  background: #0b6e60;
+  background: #cc8869;
 }
 
 .swiper-pagination-fraction {
   font-size: 16px;
-  color: #0b6e60;
+  color: #cc8869;
   margin: 0px 0px 34px 0px;
 }
 
@@ -744,7 +732,7 @@ button:hover {
 
 .swiper-scrollbar-drag {
   cursor: pointer;
-  background: #0b6e60;
+  background: #cc8869;
 }
 
 /*============================================================separate*/
@@ -776,7 +764,7 @@ button:hover {
   background-size: contain;
   position: relative;
   height: 200px;
-  border: 1px solid #0b6e60;
+  border: 1px solid #cc8869;
   border-bottom: 0px;
   border-radius: 10px 10px 0 0;
 }
@@ -813,14 +801,13 @@ button:hover {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  background: -webkit-linear-gradient(315deg, #4acaff, #21d6bf);
-  background: -o-linear-gradient(315deg, #4acaff, #21d6bf);
-  background: linear-gradient(135deg, #4acaff, #21d6bf);
+  background: -webkit-linear-gradient(315deg, #ff9945 0%, #f53e90 15%, #3d8af5 75%);
+  background: -o-linear-gradient(315deg, #ff9945 0%, #f53e90 15%, #3d8af5 75%);
+  background: linear-gradient(135deg, #ff9945 0%, #f53e90 15%, #3d8af5 75%);
   background-clip: text;
   -webkit-background-clip: text;
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
-  background-color: black;
   -webkit-backdrop-filter: blur(16px) saturate(85%);
           backdrop-filter: blur(16px) saturate(85%);
   width: 100%;
@@ -859,7 +846,7 @@ button:hover {
   text-align: center;
   height: 40px;
   width: 100%;
-  border-top: 1px solid #0b6e60;
+  border-top: 1px solid #cc8869;
   font-weight: 700;
 }
 

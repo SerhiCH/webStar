@@ -13,20 +13,9 @@
 
 /* ============================================================ */
 .text-style-1 {
-  background: -webkit-linear-gradient(315deg, #4acaff, #21d6bf);
-  background: -o-linear-gradient(315deg, #4acaff, #21d6bf);
-  background: linear-gradient(135deg, #4acaff, #21d6bf);
-  background-clip: text;
-  -webkit-background-clip: text;
-  text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-style-2 {
-  background: -webkit-gradient(linear, left top, right top, from(#0f11ee), to(#ee7f0c));
-  background: -webkit-linear-gradient(left, #0f11ee, #ee7f0c);
-  background: -o-linear-gradient(left, #0f11ee, #ee7f0c);
-  background: linear-gradient(90deg, #0f11ee, #ee7f0c);
+  background: -webkit-linear-gradient(315deg, #ff9945 0%, #f53e90 15%, #3d8af5 75%);
+  background: -o-linear-gradient(315deg, #ff9945 0%, #f53e90 15%, #3d8af5 75%);
+  background: linear-gradient(135deg, #ff9945 0%, #f53e90 15%, #3d8af5 75%);
   background-clip: text;
   -webkit-background-clip: text;
   text-fill-color: transparent;
@@ -40,7 +29,7 @@
 
 .hover1::before,
 .hover1::after {
-  content: "";
+  content: '';
   pointer-events: none;
   position: absolute;
   border: 0px solid transparent;
@@ -66,7 +55,6 @@
 
 .hover1:hover::before,
 .hover1:hover::after {
-  border-color: #21d6bf;
   -webkit-transition: border-color 0s, width 0s, height 0.1s;
   -o-transition: border-color 0s, width 0s, height 0.1s;
   transition: border-color 0s, width 0s, height 0.1s;
